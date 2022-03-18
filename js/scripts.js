@@ -1,42 +1,56 @@
-/*!
-    * Start Bootstrap - Resume v6.0.2 (https://startbootstrap.com/theme/resume)
-    * Copyright 2013-2020 Start Bootstrap
-    * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
-    */
-    (function ($) {
-    "use strict"; // Start of use strict
+// Initiate i18n
+// the default locale
+// you can for example take it from the URL.
+let locale = 'de';
 
-    // Smooth scrolling using jQuery easing
-    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
-        if (
-            location.pathname.replace(/^\//, "") ==
-                this.pathname.replace(/^\//, "") &&
-            location.hostname == this.hostname
-        ) {
-            var target = $(this.hash);
-            target = target.length
-                ? target
-                : $("[name=" + this.hash.slice(1) + "]");
-            if (target.length) {
-                $("html, body").animate(
-                    {
-                        scrollTop: target.offset().top,
-                    },
-                    1000,
-                    "easeInOutExpo"
-                );
-                return false;
-            }
-        }
-    });
+// the translation data
+// you can load/fetch these from files or keep them hardcoded.
+let messages = {
+	en: {
+        language: "Englisch",
+		about: {
+            p1: 'Hello! My name is Julia Fellermair and I\'m a Food Technology student.',
+            p2: 'I am always open to new challenges and am, more than anything else, interested in innovative and sustainable projects within the Food Technology and Beverage industries'
+        },
+	},
+	de: {
+        language: "Deutsch",
+		about: {
+            p1: 'Hallo! Mein Name ist Julia Fellermair und ich bin Studentin der Lebenmitteltechnologien.',
+            p2: 'Ich bin offen für neue Herausforderungen und interessiere mich dabei vor allem für innovative und nachhaltige Projekte in der Lebensmittel- und Getränkeindustrie.',
+        },
+	},
+	nl: {
+        language: "Nederlands",
+		about: {
+            p1: 'Hallo! Mijn naam is Julia Fellermair ik ben een student Voedingsmiddelentechnologie',
+            p2: 'Ik ben altijd open voor nieuwe uitdagingen en ben daarbij vooral geïnteresseerd in innovatieve en duurzame projecten in de Voedings- en Drank industrie.'
+        },
+	},
+};
 
-    // Closes responsive menu when a scroll trigger link is clicked
-    $(".js-scroll-trigger").click(function () {
-        $(".navbar-collapse").collapse("hide");
-    });
+// finally, pass them to AlpineI18n:
+document.addEventListener('alpine-i18n:ready', function () {	
+    window.AlpineI18n.create(locale, messages);
+});
 
-    // Activate scrollspy to add active class to navbar items on scroll
-    $("body").scrollspy({
-        target: "#sideNav",
-    });
-})(jQuery); // End of use strict
+// Initiate Navbar
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(function(navLink) {
+    if (navLink.parentElement.classList.contains('dropdown')) {
+        const navDropdownItems = navLink.parentElement.querySelectorAll('.dropdown-item');
+        navDropdownItems.forEach(function(dropdownItem) {
+            dropdownItem.addEventListener('click', hideNavbarCollapsible);
+        });
+    } else {
+        navLink.addEventListener('click', hideNavbarCollapsible);
+    }
+});
+
+function hideNavbarCollapsible() {
+    const collapse = document.getElementById('navbarSupportedContent');
+    const bsCollapse = bootstrap.Collapse.getInstance(collapse);
+    if (bsCollapse) {
+        bsCollapse.hide();
+    }
+}
