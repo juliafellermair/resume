@@ -26,15 +26,15 @@
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#about">Über Mich</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Erfahrung</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Bildung</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Kenntnisse</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#interests">Interessen</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#awards">Auszeichnungen</a></li>
-                    <li class="nav-item dropdown" x-data>
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" x-text="$t('language')"></a>
+                <ul class="navbar-nav" x-data>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#about" x-text="$t('nav.about')">Über Mich</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience" x-text="$t('nav.experience')">Erfahrung</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education" x-text="$t('nav.education')">Bildung</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills" x-text="$t('nav.skills')">Kenntnisse</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#interests" x-text="$t('nav.interests')">Interessen</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#awards" x-text="$t('nav.awards')">Auszeichnungen</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" x-text="$t('language')">Deutsch</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                           <li><a class="dropdown-item" href="#" @click="$locale('en')">Englisch</a></li>
                           <li><a class="dropdown-item" href="#" @click="$locale('de')">Deutsch</a></li>
@@ -45,20 +45,20 @@
             </div>
         </nav>
         <!-- Page Content-->
-        <div class="container-fluid p-0" x-data>
+        <div class="container-fluid p-0">
             <!-- About-->
-            <section class="resume-section" id="about">
+            <section class="resume-section" id="about" x-data>
                 <div class="resume-section-content">
                     <h1 class="mb-0">
                         Julia
                         <span class="text-primary">Fellermair</span>
                     </h1>
                     <div class="subheading mb-5">
-                        Obere Hauptstr. 65 · Freising 85354 · 01704387463 ·
-                        <a href="mailto:julia.fellermair@student.hswt.de">julia.fellermair@student.hswt.de</a>
+                        Obere Hauptstr. 65 · Freising 85354 · +491704387463 ·
+                        <a href="mailto:julia.fellermair@web.de">julia.fellermair@web.de</a>
                     </div>
-                    <p class="lead mb-5" x-text="$t('about.p1')"></p>
-                    <p class="lead mb-5" x-text="$t('about.p2')"></p>
+                    <p class="lead mb-5" x-text="$t('about.p1')">Hallo! Mein Name ist Julia Fellermair und ich bin Studentin der Lebenmitteltechnologien.</p>
+                    <p class="lead mb-5" x-text="$t('about.p2')">Ich bin offen für neue Herausforderungen und interessiere mich dabei vor allem für innovative und nachhaltige Projekte in der Lebensmittel- und Getränkeindustrie.</p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/julia-fellermair-74450518a/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     </div>
@@ -66,93 +66,93 @@
             </section>
             <hr class="m-0" />
             <!-- Experience-->
-            <section class="resume-section" id="experience">
+            <section class="resume-section" id="experience" x-data>
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Erfahrung</h2>
+                    <h2 class="mb-5" x-text="$t('nav.experience')">Erfahrung</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Projekt Management Assistant - Werkstudentin</h3>
-                            <div class="subheading mb-3">Krones AG - Werk Steinecker</div>
-                            <p>Im Projektmanagement ist keine Anfrage wie die andere. Flexibilität ist besonders in schweren Zeiten sehr gefragt. Genau deshalb arbeiten wir im Team jeden Tag daran, Projekte sauber über die Bühne laufen zu lassen und den Kunden zufrieden zu stellen. Organisation ist dabei von höchster Bedeutung. Unterstützend nutze ich dafür die Unternehmenssoftware SAP und für den Überblick und die virtuelle Zusammenarbeit SharePoint von Microsoft Office. </p>
+                            <h3 class="mb-0" x-text="$t('experience.p1.header')">Projekt Management Assistant - Werkstudentin</h3>
+                            <div class="subheading mb-3" x-text="$t('experience.p1.sub')">Krones AG - Werk Steinecker</div>
+                            <p x-text="$t('experience.p1.text')">Im Projektmanagement ist keine Anfrage wie die andere. Flexibilität ist besonders in schweren Zeiten sehr gefragt. Genau deshalb arbeiten wir im Team jeden Tag daran, Projekte sauber über die Bühne laufen zu lassen und den Kunden zufrieden zu stellen. Organisation ist dabei von höchster Bedeutung. Unterstützend nutze ich dafür die Unternehmenssoftware SAP und für den Überblick und die virtuelle Zusammenarbeit SharePoint von Microsoft Office. </p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">April 2020 - Present</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary" x-text="$t('experience.p1.date')">April 2020 - Present</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Köchin</h3>
-                            <div class="subheading mb-3">KENNEDYS BAR</div>
-                            <p>Um in der Küche für einen reibungsfreien Ablauf zu gewährleisten braucht es vor allem Organisationstalent und die Fähigkeit, zu jedem Zeitpunkt einen kühlen Kopf zu bewahren. Die Begeisterung für das Kochen, das Menschen mit Essen begeistern und die Freude am kreativen Anrichten ist mir geblieben.</p>
+                            <h3 class="mb-0" x-text="$t('experience.p2.header')">Köchin</h3>
+                            <div class="subheading mb-3" x-text="$t('experience.p2.sub')">KENNEDYS BAR</div>
+                            <p x-text="$t('experience.p2.text')">Um in der Küche für einen reibungsfreien Ablauf zu gewährleisten braucht es vor allem Organisationstalent und die Fähigkeit, zu jedem Zeitpunkt einen kühlen Kopf zu bewahren. Die Begeisterung für das Kochen, das Menschen mit Essen begeistern und die Freude am kreativen Anrichten ist mir geblieben.</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Oktober 2018 - Mai 2019</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary" x-text="$t('experience.p2.date')">Oktober 2018 - Mai 2019</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Verkäuferin Einzelhandel</h3>
-                            <div class="subheading mb-3">Hunkemöller</div>
-                            <p>Durch das Arbeiten im Verkauf wurde meine Menschenkenntnis geschult und ich konnte in der Praxis umsetzen, was ich in Workshops über Überzugungskraft gelernt habe. Meine individuelle und kreative Beratung ist es, was die Kunden an mir zu schätzen wussten. 
+                            <h3 class="mb-0" x-text="$t('experience.p3.header')">Verkäuferin Einzelhandel</h3>
+                            <div class="subheading mb-3" x-text="$t('experience.p3.sub')">Hunkemöller</div>
+                            <p x-text="$t('experience.p3.text')">Durch das Arbeiten im Verkauf wurde meine Menschenkenntnis geschult und ich konnte in der Praxis umsetzen, was ich in Workshops über Überzugungskraft gelernt habe. Meine individuelle und kreative Beratung ist es, was die Kunden an mir zu schätzen wussten. 
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Februar 2018 - Juli 2018</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary" x-text="$t('experience.p3.date')">Februar 2018 - Juli 2018</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Service</h3>
-                            <div class="subheading mb-3">Pianka Service GmbH</div>
-                            <p>In meinem erster Job im Gastgewerbe habe ich vieles über das Arbeitsleben gelernt: Die Bedeutung von Kommunikation, eingespielter Teamarbeit und Lösungsorientierung.</p>
+                            <h3 class="mb-0" x-text="$t('experience.p4.header')">Service</h3>
+                            <div class="subheading mb-3" x-text="$t('experience.p4.sub')">Pianka Service GmbH</div>
+                            <p x-text="$t('experience.p4.text')">In meinem erster Job im Gastgewerbe habe ich vieles über das Arbeitsleben gelernt: Die Bedeutung von Kommunikation, eingespielter Teamarbeit und Lösungsorientierung.</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Oktober 2015 - Februar 2018</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary" x-text="$t('experience.p4.date')">Oktober 2015 - Februar 2018</span></div>
                     </div>
                 </div>
             </section>
             <hr class="m-0" />
             <!-- Education-->
-            <section class="resume-section" id="education">
+            <section class="resume-section" id="education" x-data>
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Bildung</h2>
+                    <h2 class="mb-5" x-text="$t('nav.education')">Bildung</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Hochschule Weihenstephan-Triesdorf</h3>
-                            <div class="subheading mb-3">Lebenmitteltechnologie</div>
-                            <div>Bachelor of Science</div>
-                            <p>derzeitiger Notendurchschnitt: 1,67</p>
+                            <h3 class="mb-0" x-text="$t('education.p1.header')">Hochschule Weihenstephan-Triesdorf</h3>
+                            <div class="subheading mb-3" x-text="$t('education.p1.sub')">Lebenmitteltechnologie</div>
+                            <div x-text="$t('education.p1.type')">Bachelor of Science</div>
+                            <p x-text="$t('education.p1.note')">derzeitiger Notendurchschnitt: 1,67</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Oktober 2018 - Present</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary" x-text="$t('education.p1.date')">Oktober 2018 - Present</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Häme University of Applied Sciences - Finnland</h3>
-                            <div class="subheading mb-3">Biotechnology and Food Engineering</div>
-                            <div>ERASMUS + </div>
-                            <p>Notendurchschnitt: 1,0</p>
-                            <p class="mb-1">Teilnahme an Forschungsprojekt "Biochar Production"</p>
-                            <p class="mb-1">3. Platz in Hackathon Wettbewerb</p>
-                            <p class="mb-1">Sustainable Bioeconomy</p>
+                            <h3 class="mb-0" x-text="$t('education.p2.header')">Häme University of Applied Sciences - Finnland</h3>
+                            <div class="subheading mb-3" x-text="$t('education.p2.sub')">Biotechnology and Food Engineering</div>
+                            <div x-text="$t('education.p2.type')">ERASMUS + </div>
+                            <p x-text="$t('education.p2.note')">Notendurchschnitt: 1,0</p>
+                            <p class="mb-1" x-text="$t('education.p2.info1')">Teilnahme an Forschungsprojekt "Biochar Production"</p>
+                            <p class="mb-1" x-text="$t('education.p2.info2')">3. Platz in Hackathon Wettbewerb</p>
+                            <p class="mb-1" x-text="$t('education.p2.info3')">Sustainable Bioeconomy</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2019 - Dezember 2019</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary" x-text="$t('education.p2.header')">August 2019 - Dezember 2019</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Technische Universität München</h3>
-                            <div class="subheading mb-3">Umweltingenieurwesen</div>
-                            <div>Bachlor of Science</div>
+                            <h3 class="mb-0" x-text="$t('education.p3.header')">Technische Universität München</h3>
+                            <div class="subheading mb-3" x-text="$t('education.p3.sub')">Umweltingenieurwesen</div>
+                            <div x-text="$t('education.p3.type')">Bachlor of Science</div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Oktober 2017 - August 2018</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary" x-text="$t('education.p3.date')">Oktober 2017 - August 2018</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Anne-Frank-Gymnasium Erding</h3>
-                            <div class="subheading mb-3">allgemeine Hochschulreife (Abitur)</div>
-                            <p>NC: 1,8</p>
+                            <h3 class="mb-0" x-text="$t('education.p4.header')">Anne-Frank-Gymnasium Erding</h3>
+                            <div class="subheading mb-3" x-text="$t('education.p4.sub')">allgemeine Hochschulreife (Abitur)</div>
+                            <p x-text="$t('education.p4.note')">NC: 1,8</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September2009 - Juli 2017</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary" x-text="$t('education.p4.date')">September2009 - Juli 2017</span></div>
                     </div>
                 </div>
             </section>
             <hr class="m-0" />
             <!-- Skills-->
-            <section class="resume-section" id="skills">
+            <section class="resume-section" id="skills" x-data>
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Kenntnisse und Fähigkeiten</h2>
-                    <div class="subheading mb-3">EDV-Kenntnisse</div>
+                    <h2 class="mb-5" x-text="$t('skills.header')">Kenntnisse und Fähigkeiten</h2>
+                    <div class="subheading mb-3" x-text="$t('skills.it.header')">EDV-Kenntnisse</div>
                     <ul class="list-inline dev-icons">
                         <li class="list-inline-item"><i class="far fa-file-word"></i></li>
                         <li class="list-inline-item"><i class="far fa-file-excel"></i></li>
@@ -166,41 +166,41 @@
                         </li>
                         <li class="list-inline-item">SAP</li>
                     </ul>
-                    <div class="subheading mb-3">Sprachen</div>
+                    <div class="subheading mb-3" x-text="$t('skills.lang.header')">Sprachen</div>
                     <ul class="fa-ul mb-3">
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Englisch B2+/C1 - Verhandlungssicher
+                            <span x-text="$t('skills.lang.lang1')">B2+/C1 - Verhandlungssicher</span>
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Italienisch A2 - Grundlegende Kenntnisse
+                            <span x-text="$t('skills.lang.lang2')">Italienisch A2 - Grundlegende Kenntnisse</span>
                         </li>
                     </ul>
-                    <div class="subheading mb-3">Fähigkeiten</div>
+                    <div class="subheading mb-3" x-text="$t('skills.skills.header')">Fähigkeiten</div>
                     <ul class="fa-ul mb-0">
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Projektmanagement
+                            <span x-text="$t('skills.skills.skill1')">Projektmanagement</span>
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Innovatives Mindset 
+                            <span x-text="$t('skills.skills.skill2')">Innovatives Mindset</span>
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Analytisches Denken 
+                            <span x-text="$t('skills.skills.skill3')">Analytisches Denken</span>
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Interkulturelle Kommunikation
+                            <span x-text="$t('skills.skills.skill4')">Interkulturelle Kommunikation</span>
                         </li>
                     </ul>
                 </div>
             </section>
             <hr class="m-0" />
             <!-- Interests-->
-            <section class="resume-section" id="interests">
+            <section class="resume-section" id="interests" x-data>
                 <div class="resume-section-content">
                     <h2 class="mb-5">Interessen</h2>
                     <p>In meiner Freizeit treibe ich gerne Sport, gehe laufen, wandern oder mache Yoga. Meine Leidenschaft gilt dem Kochen, gerne lade ich dazu Freunde und Familie ein. Nach dem Essen wird dann gerne über Politik und Gesellschaft diskutiert. Außerdem interessiere ich mich sehr für Kunst und Literatur sowie das Theater.</p>
@@ -208,7 +208,7 @@
             </section>
             <hr class="m-0" />
             <!-- Awards-->
-            <section class="resume-section" id="awards">
+            <section class="resume-section" id="awards" x-data>
                 <div class="resume-section-content">
                     <h2 class="mb-5">Auszeichnungen</h2>
                     <ul class="fa-ul mb-0">
