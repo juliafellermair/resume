@@ -36,9 +36,9 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" x-text="$t('language')">Deutsch</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#" @click="$locale('en')">Englisch</a></li>
-                          <li><a class="dropdown-item" href="#" @click="$locale('de')">Deutsch</a></li>
-                          <li><a class="dropdown-item" href="#" @click="$locale('nl')">Nederlands</a></li>
+                          <li><a class="dropdown-item" href="#" @click.prevent="$locale('en')">Englisch</a></li>
+                          <li><a class="dropdown-item" href="#" @click.prevent="$locale('de')">Deutsch</a></li>
+                          <li><a class="dropdown-item" href="#" @click.prevent="$locale('nl')">Nederlands</a></li>
                         </ul>
                       </li>
                 </ul>
@@ -202,23 +202,23 @@
             <!-- Interests-->
             <section class="resume-section" id="interests" x-data>
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Interessen</h2>
-                    <p>In meiner Freizeit treibe ich gerne Sport, gehe laufen, wandern oder mache Yoga. Meine Leidenschaft gilt dem Kochen, gerne lade ich dazu Freunde und Familie ein. Nach dem Essen wird dann gerne über Politik und Gesellschaft diskutiert. Außerdem interessiere ich mich sehr für Kunst und Literatur sowie das Theater.</p>
+                    <h2 class="mb-5" x-text="$t('interests.header')">Interessen</h2>
+                    <p x-text="$t('interests.text')">In meiner Freizeit treibe ich gerne Sport, gehe laufen, wandern oder mache Yoga. Meine Leidenschaft gilt dem Kochen, gerne lade ich dazu Freunde und Familie ein. Nach dem Essen wird dann gerne über Politik und Gesellschaft diskutiert. Außerdem interessiere ich mich sehr für Kunst und Literatur sowie das Theater.</p>
                 </div>
             </section>
             <hr class="m-0" />
             <!-- Awards-->
             <section class="resume-section" id="awards" x-data>
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Auszeichnungen</h2>
+                    <h2 class="mb-5" x-text="$t('awards.header')">Auszeichnungen</h2>
                     <ul class="fa-ul mb-0">
                         <li>
                             <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            3. Platz - HAMK - Hackathon 2019  
+                            <span x-text="$t('awards.award1')">3. Platz - HAMK - Hackathon 2019  </span>
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Deutschlandstipendium 2020
+                            <span x-text="$t('awards.award2')">Deutschlandstipendium 2020</span>
                         </li>
                         <li>
                         </li>

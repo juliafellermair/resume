@@ -185,6 +185,15 @@ let messages = {
                 skill4: 'Interkulturelle Kommunikation',
             },
         },
+        interests: {
+            header: 'Interessen',
+            text: 'In meiner Freizeit treibe ich gerne Sport, gehe laufen, wandern oder mache Yoga. Meine Leidenschaft gilt dem Kochen, gerne lade ich dazu Freunde und Familie ein. Nach dem Essen wird dann gerne über Politik und Gesellschaft diskutiert. Außerdem interessiere ich mich sehr für Kunst und Literatur sowie das Theater.'
+        },
+        awards: {
+            header: 'Auszeichnungen',
+            award1: '3. Platz - HAMK - Hackathon 2019',
+            award2: 'Deutschlandstipendium 2020 - 2021'
+        },
 	},
 	nl: {
         language: "Nederlands",
