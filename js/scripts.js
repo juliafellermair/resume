@@ -227,7 +227,7 @@ let messages = {
             },
             lang: {
                 header: 'Sprachen',
-                lang1: 'B2+/C1 - Verhandlungssicher',
+                lang1: 'Englisch B2+/C1 - Verhandlungssicher',
                 lang2: 'Italienisch A2 - Grundlegende Kenntnisse',
                 lang3: 'Niederländisch - Anfänger',
             },
